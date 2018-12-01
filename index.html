@@ -22,29 +22,40 @@
 		<div class="col-sm-8">
 			<h2>RADIO A MARTELO</ >
 		</div>			
-    <div class="media-body">
+		<div class="media-body">
       	    <div class="col-sm-8">
-		   <style>audio::-webkit-media-controls-timeline { display:none;}</style>
-<audio autoplay controls="controls" src="http://stm8.igrsistemas.com.br:9724/;"></audio>
-<p>
-<script type="text/javascript">
-$.getJSON('http://xcast.com.br/api-json/VkRGU2FtVlZOVUpRVkRBOStS', function(data) {
-
-var musica_atual = data.musica_atual; // Mostra a música atual
-var proxima_musica = data.proxima_musica; // Mostra a próxima música do AutoDJ(não é valido para transmissão ao vivo)
-});
-</script>
-</p> 
-	    </div>
-    </div>
-  </div>
-</div>
+				<script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
+					<script type="text/javascript">
+						MRP.insert({
+						'url':'http://stm8.igrsistemas.com.br:9724/;',
+						'codec':'mp3',
+						'volume':100,
+						'autoplay':true,
+						'forceHTML5':true,
+						'jsevents':false,
+						'buffering':0,
+						'title':'Radio a Martelo',
+						'wmode':'transparent',
+						'skin':'compact',
+						'width':191,
+						'height':46
+						});
+						</script>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-6">
 		<h2 class="text-center">Passou ainda agora...</h2>
-		
+						<script type="text/javascript">
+						$.getJSON('http://xcast.com.br/api-json/VkRGU2FtVlZOVUpRVkRBOStS', function(data) {
+
+						var musica_atual = data.musica_atual; // Mostra a música atual
+						var proxima_musica = data.proxima_musica; // Mostra a próxima música do AutoDJ(não é valido para transmissão ao vivo)
+						});
+						</script>
 		</div>
 		<div class="col-md-6">
 			<h2 class="text-Center">Próximas Emissões Live...</h2>
@@ -60,7 +71,5 @@ var proxima_musica = data.proxima_musica; // Mostra a próxima música do AutoDJ
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script language="javascript" type="text/javascript" src="http://cast.redewt.net:2199/system/streaminfo.js"></script>
-	<script language="javascript" type="text/javascript" src="http://cast.redewt.net:2199/system/recenttracks.js"></script>
     </body>
 </html>
